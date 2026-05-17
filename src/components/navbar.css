@@ -1,0 +1,157 @@
+.navbar{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 50px;
+    box-sizing: border-box;
+
+    background-color: black;
+    position: relative;
+}
+
+/* Logo */
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: aqua;
+}
+
+/* Navigation Box */
+.navigation{
+    background-color: rgb(28, 25, 25);
+    border-radius: 40px;
+    padding: 5px 25px;
+}
+
+/* Navigation UL */
+.navigationUL{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav Links */
+.navigation a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navigation a:hover{
+    color: aqua;
+}
+
+/* Contact Buttons */
+.contact-UL{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 0;
+    margin: 0;
+}
+
+.contact-UL a{
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 33px;
+
+    color: white;
+    transition: 0.4s ease;
+}
+
+/* Contact Button */
+#contact-btn a{
+    background-color: rgb(134, 218, 32);
+    color: black;
+    font-weight: bold;
+}
+
+#contact-btn a:hover{
+    transform: translateY(-3px);
+}
+
+/* Get Started Button */
+#get-started-btn a{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+    border-top: 1.5px solid aqua;
+
+    color: white;
+    z-index: 1;
+}
+
+/* Circle Animation */
+#get-started-btn a::before{
+    content: "";
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: aqua;
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.7s ease;
+
+    z-index: -1;
+}
+
+#get-started-btn a:hover::before{
+    transform: translate(-50%, -50%) scale(20);
+}
+
+#get-started-btn a:hover{
+    color: black;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .navigation{
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    .navigationUL{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-UL{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-UL li{
+        width: 100%;
+    }
+
+    .contact-UL a{
+        display: block;
+        text-align: center;
+    }
+}
