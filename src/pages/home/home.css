@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Smooch+Sans:wght@100..900&display=swap");
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: auto;
+  width: 100%;
+}
+.home .homeText {
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+}
+.home .homeText h1 {
+  font-family: "Allan", serif;
+  font-size: 50px;
+  color: rgb(240, 247, 223);
+  text-align: center;
+  font-size: 100px;
+  z-index: 1;
+}
+.home .homeText h1 span {
+  color: rgb(71, 75, 31);
+}
+
+.gymImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: black;
+  height: 100%;
+  padding-top: 0px;
+  top: 30%;
+}
+
+.gymImage img {
+  width: 50%;
+  height: auto;
+  z-index: 2;
+  transform: translateY(-70px);
+}
+
+/* .homeText{
+    top: 60%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    width: 100%;
+    opacity: 1;
+
+} */
+/* .homeText h1{
+    font-family: 'Allan', serif;
+    font-size: 50px;
+    color: rgb(240, 247, 223);
+    text-align: center;
+    font-size: 100px;
+    z-index: 1;
+} */
+/* .homeText h1 span{
+    color:rgb(71, 75, 31)''
+} */
+.sideText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(20%);
+  z-index: 2;
+}
+
+.sideText h4 span {
+  display: block;
+  margin: 0px 25px;
+  gap: 30px;
+  flex-direction: column;
+  color: rgb(161, 121, 70);
+  padding: 10px;
+  position: relative;
+}
+
+/* .infoText{
+    width: 100%;
+    height: auto;
+    top: 100vh;
+    position: relative;
+
+
+     */
+/* } */
+.homeText h2 {
+  color: rgb(123, 123, 123);
+  position: absolute;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .homeText {
+    transform: translate(-50%, 20%);
+  }
+  .homeText h1 {
+    font-size: 35px;
+  }
+  .gymImage img {
+    margin-top: 30px;
+  }
+}/*# sourceMappingURL=home.css.map */
