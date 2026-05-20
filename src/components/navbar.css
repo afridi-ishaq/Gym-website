@@ -1,6 +1,6 @@
 .navbar{
     width: 100%;
-    min-height: 100px;
+    height: 95px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,7 +9,9 @@
     box-sizing: border-box;
 
     background-color: black;
-    position: relative;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
 }
 
 /* Logo */
@@ -17,6 +19,7 @@
     font-size: 30px;
     font-weight: bold;
     color: aqua;
+    z-index: 1000;
 }
 
 /* Navigation Box */
@@ -24,6 +27,7 @@
     background-color: rgb(28, 25, 25);
     border-radius: 40px;
     padding: 5px 25px;
+    z-index: 1000;
 }
 
 /* Navigation UL */
@@ -35,6 +39,7 @@
 
     padding: 0;
     margin: 0;
+    z-index: 1000;
 }
 
 /* Nav Links */
@@ -43,6 +48,7 @@
     color: white;
     font-size: 18px;
     transition: 0.3s;
+    
 }
 
 .navigation a:hover{
@@ -58,6 +64,7 @@
 
     padding: 0;
     margin: 0;
+    z-index: 1000;
 }
 
 .contact-UL a{
@@ -67,12 +74,14 @@
 
     color: white;
     transition: 0.4s ease;
+    z-index: 1000;
 }
 
 /* Contact Button */
 #contact-btn a{
     background-color: rgb(134, 218, 32);
     color: black;
+    z-index: 1000;
     font-weight: bold;
 }
 
@@ -126,14 +135,14 @@
 
     .navbar{
         flex-direction: column;
-        gap: 20px;
-
-        padding: 20px;
+        gap: 10px;
+        
+        margin-top: -30px;
     }
 
     .navigation{
         width: 100%;
-        padding: 15px 10px;
+        padding: 10px 10px;
     }
 
     .navigationUL{
@@ -153,5 +162,9 @@
     .contact-UL a{
         display: block;
         text-align: center;
+    }
+    .logo{
+        
+        margin-bottom: -20px;
     }
 }
