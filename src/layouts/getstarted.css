@@ -1,0 +1,234 @@
+/* Get Started Page */
+.getstarted-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+/* Hero Section */
+.getstarted-hero {
+  background: linear-gradient(135deg, #ff4444 0%, #ff6666 100%);
+  color: white;
+  padding: 100px 40px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.getstarted-hero h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.getstarted-hero p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+/* Container */
+.getstarted-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* Plans Section */
+.plans-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.plan-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff4444;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.selected {
+  border-color: #ff4444;
+  background: #fff5f5;
+  box-shadow: 0 10px 30px rgba(255, 68, 68, 0.2);
+}
+
+.plan-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ff4444;
+  margin-bottom: 20px;
+}
+
+.plan-price span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  padding: 10px 0;
+  color: #666;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.plan-features li:last-child {
+  border-bottom: none;
+}
+
+/* Registration Form */
+.registration-form {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.registration-form h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ff4444;
+  box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1);
+}
+
+.selected-plan-display {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.selected-plan-display p {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.registration-form .btn-large {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .getstarted-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .plans-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .registration-form {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .getstarted-hero {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+  }
+
+  .getstarted-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .getstarted-container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-form {
+    padding: 30px 20px;
+  }
+
+  .registration-form h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .plans-section h2 {
+    font-size: 1.5rem;
+  }
+}

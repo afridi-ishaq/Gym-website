@@ -108,6 +108,15 @@ body{
     z-index: 2;
     
 }
+@media (max-width: 768px){
+    .home{
+        width: 100%;
+        height: auto;
+        top: 50px;
+        left: auto;
+        position: absolute;
+    }
+}
 @media (max-width:768px) {
     .homeText{
         transform: translate(-50%,20%);
@@ -120,4 +129,5 @@ body{
     .gymImage img{
         margin-top: 30px;
     }
+    
 }

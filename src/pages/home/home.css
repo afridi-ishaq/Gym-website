@@ -1,115 +1,200 @@
-@import url("https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Smooch+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
+/* Home Page Styles */
 .home {
-  height: auto;
-  width: 100%;
-}
-.home .homeText {
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 100%;
-  opacity: 1;
-}
-.home .homeText h1 {
-  font-family: "Allan", serif;
-  font-size: 50px;
-  color: rgb(240, 247, 223);
-  text-align: center;
-  font-size: 100px;
-  z-index: 1;
-}
-.home .homeText h1 span {
-  color: rgb(71, 75, 31);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
 }
 
-.gymImage {
+/* Hero Section */
+.hero {
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  width: 100%;
-  background-color: black;
-  height: 100%;
-  padding-top: 0px;
-  top: 30%;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.gymImage img {
-  width: 50%;
-  height: auto;
-  z-index: 2;
-  transform: translateY(-70px);
+.hero-content {
+  max-width: 900px;
 }
 
-/* .homeText{
-    top: 60%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+.hero-content h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #000;
+  letter-spacing: -1px;
+}
 
-    width: 100%;
-    opacity: 1;
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #666;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
 
-} */
-/* .homeText h1{
-    font-family: 'Allan', serif;
-    font-size: 50px;
-    color: rgb(240, 247, 223);
-    text-align: center;
-    font-size: 100px;
-    z-index: 1;
-} */
-/* .homeText h1 span{
-    color:rgb(71, 75, 31)''
-} */
-.sideText {
+.hero-buttons {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transform: translateY(20%);
-  z-index: 2;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.sideText h4 span {
-  display: block;
-  margin: 0px 25px;
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #ff4444;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #ff3333;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 68, 68, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.btn-secondary:hover {
+  background-color: #000;
+  color: white;
+}
+
+.btn-large {
+  padding: 18px 48px;
+  font-size: 1.1rem;
+}
+
+/* Features Preview Section */
+.features-preview {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  flex-direction: column;
-  color: rgb(161, 121, 70);
-  padding: 10px;
-  position: relative;
+  margin-top: 40px;
 }
 
-/* .infoText{
-    width: 100%;
-    height: auto;
-    top: 100vh;
-    position: relative;
-
-
-     */
-/* } */
-.homeText h2 {
-  color: rgb(123, 123, 123);
-  position: absolute;
-  z-index: 2;
+.feature-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-color: #ff4444;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta {
+  background: #000;
+  color: white;
+  padding: 80px 40px;
+  text-align: center;
+  border-radius: 0;
+  margin: 0 -20px;
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #d0d0d0;
+  font-weight: 300;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .homeText {
-    transform: translate(-50%, 20%);
+  .home {
+    gap: 50px;
+    padding: 40px 15px;
   }
-  .homeText h1 {
-    font-size: 35px;
+
+  .hero-content h1 {
+    font-size: 2rem;
   }
-  .gymImage img {
-    margin-top: 30px;
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
   }
-}/*# sourceMappingURL=home.css.map */
+
+  .btn {
+    width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 50px 20px;
+  }
+}   
